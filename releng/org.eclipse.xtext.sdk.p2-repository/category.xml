@@ -8,6 +8,8 @@
 	</feature>
 	<bundle id="org.junit" version="4.12.0.qualifier"></bundle>
 	<bundle id="org.junit.source" version="4.12.0.qualifier"></bundle>
+	<bundle id="org.kohsuke.args4j" version="2.33.0.qualifier"></bundle>
+	<bundle id="org.kohsuke.args4j.source" version="2.33.0.qualifier"></bundle>
 	<bundle id="org.objectweb.asm" version="6.2.1.qualifier"></bundle>
 	<bundle id="org.objectweb.asm.source" version="6.2.1.qualifier"></bundle>
 	<bundle id="org.objectweb.asm.tree" version="6.2.1.qualifier"></bundle>
