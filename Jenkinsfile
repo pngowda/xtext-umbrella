@@ -33,10 +33,12 @@ node {
 				fi	
 			}
 			
-			targetfile=releng/org.eclipse.xtext.sdk.target/org.eclipse.xtext.sdk.target.target
-
-			echo "Redirecting target platforms in $targetfile to $branchname"
-			sed_inplace "s?<repository location=\\".*/job/\\([^/]*\\)/job/[^/]*/?<repository location=\\"$JENKINS_URL/job/\\1/job/$escapedBranch/?" $targetfile
+			targetFiles="$(find releng -type f -iname '*.target')"
+			for targetFile in $targetFiles
+			do
+				echo "Redirecting target platforms in $targetfile to $branchname"
+				sed_inplace "s?<repository location=\\".*/job/\\([^/]*\\)/job/[^/]*/?<repository location=\\"$JENKINS_URL/job/\\1/job/$escapedBranch/?" $targetfile
+			done
 		'''
 	}
 	
